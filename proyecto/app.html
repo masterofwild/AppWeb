@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>App productos</title>
+	<!-- Importando estilos de bootstrap -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="eventos.js"></script>
+
+	<!-- Importando jQuery -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+	<div class="container">
+		<div class="w-100">
+			<div class="text-center">
+				<h1>Inventario de productos</h1>
+				<p class="text-center h3">Lista de productos registrados</p>
+				<button class="btn btn-primary" id="btn_agregar">Agregar</button>
+			</div>
+			<br>
+
+			<table class="table table-hover table-bordered table-striped">
+				<thead>
+					<tr class="text-center">
+						<th>Folio</th>
+						<th>Nombre</th>
+						<th>Color</th>
+						<th>Costo</th>
+						<th>Unidad medida</th>
+						<th>Fecha de baja</th>
+						<th>Operaciones</th>
+					</tr>
+				</thead>
+				<tbody id="tbl_body">
+					<tr>
+						<td colspan="6" class="text-center">No se encontraron productos</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<hr>
+
+			<div id="formulario" hidden="">
+				<p class="text-center h3">Formulario de productos</p>
+				<form action="#">
+					<div class="form-group">
+						<label for="folio">Folio</label>
+						<input type="text" class="form-control" id="folio" name="folio" required="">
+					</div>
+					<div class="form-group">
+						<label for="nombre">Nombre</label>
+						<input type="text" class="form-control" id="nombre" name="nombre" required="">
+					</div>
+					<div class="form-group">
+						<label for="color">Color</label>
+						<input type="text" class="form-control" id="color" name="color" required="">
+					</div>
+					<div class="form-group">
+						<label for="costo">Costo</label>
+						<input type="number" class="form-control" id="costo" name="costo" required="">
+					</div>
+					<div class="form-group">
+						<label for="unidad_medida">Unidad de medida</label>
+						<input type="text" class="form-control" id="unidad_medida" name="unidad_medida" required="">
+					</div>
+					<div class="form-group">
+						<label for="fecha_baja">Fecha de baja</label>
+						<input type="date" class="form-control" id="fecha_baja" name="fecha_baja">
+					</div>
+					<div class="text-center">
+						<button type="button" class="btn btn-success" id="btn_guardar" hidden>Registrar</button>
+						<button type="button" class="btn btn-success" id="btn_editar" hidden>Editar</button>
+						<button type="button" class="btn btn-warning" id="btn_cancelar">Cancelar</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
